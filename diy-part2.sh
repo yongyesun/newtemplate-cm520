@@ -21,5 +21,5 @@ cp -r package/lede/tools/upx tools/upx
 sed -i '29a tools-y += ucl upx' tools/Makefile
 sed -i '45a $(curdir)/upx/compile := $(curdir)/ucl/compile' tools/Makefile
 rm -rf package/lede
-sed -i '286,290d' target/linux/ipq40xx/files/arch/arm/boot/dts/qcom-ipq4019-cm520-79f.dts
-sed -i '285a \ \n\t\t\tpartition@b80000 {\n\t\t\t\tlabel = "rootfs_1";\n\t\t\t\treg = <0xb80000 0x4100000>;\n\t\t\t};\n\ \n\t\t\tpartition@4c80000 {\n\t\t\t\tlabel = "rootfs";\n\t\t\t\treg = <0x4c80000 0x3300000>;\n\t\t\t};' target/linux/ipq40xx/files/arch/arm/boot/dts/qcom-ipq4019-cm520-79f.dts
+# sed -i '286,290d' target/linux/ipq40xx/files/arch/arm/boot/dts/qcom-ipq4019-cm520-79f.dts
+# sed -i '285a \ \n\t\t\tpartition@b80000 {\n\t\t\t\tlabel = "rootfs_1";\n\t\t\t\treg = <0xb80000 0x4100000>;\n\t\t\t};\n\ \n\t\t\tpartition@4c80000 {\n\t\t\t\tlabel = "rootfs";\n\t\t\t\treg = <0x4c80000 0x3300000>;\n\t\t\t};' target/linux/ipq40xx/files/arch/arm/boot/dts/qcom-ipq4019-cm520-79f.dts
