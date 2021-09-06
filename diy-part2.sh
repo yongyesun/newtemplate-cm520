@@ -14,7 +14,7 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 git clone --depth 1 https://github.com/yongyesun/luci-app-koolproxy package/luci-app-koolproxy
 git clone --depth 1 https://github.com/kenzok8/openwrt-packages package/kenzok8
-git clone --depth 1 https://github.com/yongyesun/lede package/lede
+git clone --depth 1 https://github.com/coolsnowwolf/lede package/lede
 cp -r package/lede/package/lean package/lean
 cp -r package/lede/tools/ucl tools/ucl
 cp -r package/lede/tools/upx tools/upx
