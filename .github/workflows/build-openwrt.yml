@@ -103,8 +103,8 @@ jobs:
       uses: actions/upload-artifact@v2
       if: env.UPLOAD_CONFIG == 'true'
       with:
-        name: config_${{ env.DEVICE_NAME }}${{ env.FILE_DATE }}
-        path: $GITHUB_WORKSPACE/openwrt/.config
+        name: config_$(date +"%Y%m%d%H%M")
+        path: openwrt/.config
         
     - name: Compile the firmware
       id: compile
