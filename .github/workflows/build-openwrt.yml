@@ -95,6 +95,8 @@ jobs:
       run: |
         cd openwrt
         make defconfig
+        ./scripts/diffconfig.sh > ${GITHUB_WORKSPACE}/config.txt
+        echo "Compile_Date=$(date +%Y%m%d%H%M)" >> $GITHUB_ENV
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
@@ -103,8 +105,8 @@ jobs:
       uses: actions/upload-artifact@v2
       if: env.UPLOAD_CONFIG == 'true'
       with:
-        name: config.txt
-        path: openwrt/.config
+        name: .config_${{ env.Compile_Date }}
+        path: config.txt
         
     - name: Compile the firmware
       id: compile
