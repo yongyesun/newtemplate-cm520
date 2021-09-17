@@ -15,8 +15,8 @@
 git clone --depth 1 https://github.com/yongyesun/luci-app-koolproxy package/luci-app-koolproxy
 git clone --depth 1 https://github.com/kenzok8/openwrt-packages package/kenzok8
 git clone --depth 1 https://github.com/coolsnowwolf/lede package/lede
-cp -f package/lede/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch /target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
-cp -f package/lede/target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch /target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
+cp package/lede/target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch /target/linux/generic/hack-5.4/952-net-conntrack-events-support-multiple-registrant.patch
+cp package/lede/target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch /target/linux/generic/hack-5.4/953-net-patch-linux-kernel-to-support-shortcut-fe.patch
 cp -r package/lede/package/lean package/lean
 cp -r package/lede/tools/ucl tools/ucl
 cp -r package/lede/tools/upx tools/upx
