@@ -18,3 +18,9 @@
 ###sed -i '$a src-git small https://github.com/kenzok8/small' feeds.conf.default
 # sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
 #sed -i '$a src-git kenzo https://github.com/kenzok8/openwrt-packages' feeds.conf.default
+#####
+sed -i '1,4d' feeds.conf.default
+sed -i '$a src-git packages https://git.openwrt.org/feed/packages.git' feeds.conf.default
+sed -i '$a src-git luci https://git.openwrt.org/project/luci.git' feeds.conf.default
+sed -i '$a src-git routing https://git.openwrt.org/feed/routing.git' feeds.conf.default
+sed -i '$a src-git telephony https://git.openwrt.org/feed/telephony.git' feeds.conf.default
